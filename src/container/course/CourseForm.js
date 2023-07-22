@@ -9,10 +9,17 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import * as Yup from 'yup'
 import { useFormik } from 'formik';
+import { useEffect } from 'react';
 
-export default function CourseForm({onsubmitdata}) {
+export default function CourseForm({ onsubmitdata, onupdate }) {
     const [open, setOpen] = React.useState(false);
 
+    useEffect(() => {
+        if (onupdate) {
+            handleClickOpen()
+            formik.setValues(onupdate)
+        }
+    }, [onupdate])
     const handleClickOpen = () => {
         setOpen(true);
     };
@@ -29,7 +36,7 @@ export default function CourseForm({onsubmitdata}) {
     })
 
     const formik = useFormik({
-    initialValues: {
+        initialValues: {
             cname: '',
             fees: ''
         },
