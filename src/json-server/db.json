@@ -1,0 +1,26 @@
+{
+    "posts": [
+      { "id": 1, "title": "json-server", "author": "typicode" }
+    ],
+    "comments": [
+      { "id": 1, "body": "some comment", "postId": 1 }
+    ],
+    "profile": { "name": "typicode" },
+    "course":[
+        {
+            "id":101,
+            "cname":"react",
+            "fees":"20000"
+        },
+        {
+            "id":102,
+            "cname":"c,c++",
+            "fees":"15000"
+        }, {
+            "id":103,
+            "cname":"node",
+            "fees":"30000"
+        }
+    ]
+
+  }
